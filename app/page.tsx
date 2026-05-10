@@ -221,7 +221,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
             <button className="w-11 h-11 rounded-full bg-[#f6efe7] hover:bg-[#b79276] flex items-center justify-center text-xl relative">
               🛒
               <span className="absolute -top-1 -right-1 bg-[#ff7f9d] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                3
+                0
               </span>
             </button>
           </div>
@@ -281,7 +281,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
       </section>
 
       {/* CATEGORIES */}
-      <section id="categories" className="max-w-7xl mx-auto px-6 py-1">
+      <section id="categories" className="max-w-4xl mx-auto px-6 py-1">
         <div className="bg-gradient-to-br from-[#fffaf7] to-[#f1e6db] rounded-[40px] p-10 shadow-sm">
           <div className="flex items-center justify-between mb-10 flex-wrap gap-5">
             <div>
@@ -315,24 +315,24 @@ product.name.toLowerCase().includes(search.toLowerCase())
       </section>
 
       {/* PRODUCTS */}
-      <section id="products" className="max-w-7xl mx-auto px-6 py-20">
+      <section id="products" className="max-w-7xl mx-auto px-6 py-14">
         <div className="flex flex-wrap items-center justify-between gap-5 mb-14">
           <div>
             <p className="text-[#8b8178] uppercase tracking-[0.3em] text-sm mb-3">
               Barcha Mahsulotlar
             </p>
 
-            <h2 className="text-5xl font-bold">OATTBE Kolleksiyalari</h2>
+            <h2 className="text-4xl font-bold">Oattbe Lineykalari</h2>
           </div>
 
-          <button className="bg-white border border-pink-100 px-6 py-3 rounded-full">
+          {/* <button className="bg-white border border-pink-100 px-6 py-3 rounded-full">
             Mahsulotlarni filtrlash
-          </button>
+          </button> */}
         </div>
 
         <div className="grid lg:grid-cols-[280px_1fr] gap-10">
           {/* SIDEBAR */}
-          <div className="bg-white rounded-[40px] p-8 h-fit shadow-sm">
+          {/* <div className="bg-white rounded-[40px] p-8 h-fit shadow-sm">
             <h3 className="text-2xl font-semibold mb-8">
               Narxlar bilan filtrlash
             </h3>
@@ -362,7 +362,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
               <div>Cream</div>
               <div>Mask</div>
             </div>
-          </div>
+          </div> */}
 
           {/* PRODUCT GRID */}
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -457,7 +457,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="bg-[#fff6f8] hover:from-[#aeb7c2] hover:to-[#7f8997] rounded-[50px] p-14 lg:p-20 text-center">
-          <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+          <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
             Teringizga Go'zal
             <br />
             Jilov Bering ✨
