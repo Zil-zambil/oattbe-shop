@@ -1,3 +1,6 @@
+'use client'
+import { useState } from 'react'
+
 export default function OattbeBeauticeShop() {
   const categories = [
     'Tozalash',
@@ -8,6 +11,8 @@ export default function OattbeBeauticeShop() {
     'Maska',
     'Makiyaj',
   ];
+
+  const [search, setSearch] = useState('')
 
   const products = [
     {
@@ -91,7 +96,7 @@ export default function OattbeBeauticeShop() {
       badge: 'BEST',
     },
     {
-      name: 'Oattbe Contour V-fit Face Pack- Lightweight gel cream with Caffeine · Botanical Extracts · Encapsulated Vitamin E',
+      name: 'Oattbe Contour V-fit Face Pack',
       price: '349 000 so‘m',
       oldPrice: '390 000 so‘m',
       image:
@@ -148,10 +153,15 @@ export default function OattbeBeauticeShop() {
     },
   ];
 
+  const filteredProducts = products.filter((product) =>
+product.name.toLowerCase().includes(search.toLowerCase())
+)
+
+
   return (
     <div className="bg-[#fff9f8] min-h-screen text-[#2b2b2b] overflow-hidden">
       {/* TOP BAR */}
-      <div className="bg-[#d6b59a] text-white text-sm py-3 px-6 text-center">
+      <div className="bg-gradient-to-r from-orange-100 to-orange-300 text-black text-sm py-3 px-6 text-center">
         OATTBE Korean Premium Skincare Sog'lom Porlash to'plami ✨
       </div>
 
@@ -185,10 +195,29 @@ export default function OattbeBeauticeShop() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button className="w-11 h-11 rounded-full bg-[#f6efe7] hover:bg-[#b79276] flex items-center justify-center text-xl">
-              🔍
-            </button>
-
+          <input
+            type="search"
+            placeholder="Search products..."
+            autoComplete="off"
+            value={search}
+            onChange={(e) => {
+            setSearch(e.target.value)
+            }}
+            className="
+            w-[240px]
+            px-5
+            py-3
+            rounded-full
+            bg-white
+            border
+            border-[#d9dee5]
+            text-black
+            outline-none
+            focus:ring-2
+            focus:ring-[#c7a58a]
+            "
+          />
+          
             <button className="w-11 h-11 rounded-full bg-[#f6efe7] hover:bg-[#b79276] flex items-center justify-center text-xl relative">
               🛒
               <span className="absolute -top-1 -right-1 bg-[#ff7f9d] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
@@ -337,7 +366,12 @@ export default function OattbeBeauticeShop() {
 
           {/* PRODUCT GRID */}
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {products.map((product, index) => (
+          {products
+.filter((product) =>
+product.name.toLowerCase().includes(search.toLowerCase())
+)
+.map((product, index) => (
+
               <div
                 key={index}
                 className="bg-white rounded-[36px] overflow-hidden shadow-sm hover:shadow-2xl transition duration-500"
@@ -355,12 +389,12 @@ export default function OattbeBeauticeShop() {
                 </div>
 
                 <div className="p-7">
-                  <h3 className="text-2xl font-semibold leading-snug mb-4">
+                  <h3 className="text-xl font-semibold leading-snug mb-4">
                     {product.name}
                   </h3>
 
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl font-bold text-[#b79276]">
+                    <span className="text-large font-bold text-black/70">
                       {product.price}
                     </span>
 
@@ -373,12 +407,12 @@ export default function OattbeBeauticeShop() {
                     <a
                       href="https://t.me/oattbe"
                       target="_blank"
-                      className="flex-1 bg-[#c7a58a] hover:bg-[#b79276] hover:from-[#aeb7c2] hover:to-[#7f8997] hover:from-[#aeb7c2] hover:to-[#7f8997] text-white py-4 rounded-full text-center hover:scale-105 transition"
+                      className="flex-1 bg-gradient-to-r from-[#1f1f1f] to-[#3a3a3a] hover:from-[#2b2b2b] hover:to-[#4a4a4a] text-white py-4 rounded-full text-center hover:scale-105 transition"
                     >
                       Buyurtma
                     </a>
 
-                    <button className="w-14 h-14 rounded-full bg-[#c7a58a] hover:bg-[#b79276] text-2xl">
+                    <button className="w-14 h-14 rounded-full bg-gradient-to-r from-[#1f1f1f] to-[#3a3a3a] hover:from-[#2b2b2b] hover:to-[#4a4a4a] text-white text-2xl">
                       ❤
                     </button>
                   </div>
@@ -422,11 +456,11 @@ export default function OattbeBeauticeShop() {
 
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="bg-gradient-to-r from-[#bfc7d1] to-[#8f9aa8] hover:from-[#aeb7c2] hover:to-[#7f8997] rounded-[50px] p-14 lg:p-20 text-center">
+        <div className="bg-[#fff6f8] hover:from-[#aeb7c2] hover:to-[#7f8997] rounded-[50px] p-14 lg:p-20 text-center">
           <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-8">
-            Healthy Glow
+            Teringizga Go'zal
             <br />
-            Begins Here ✨
+            Jilov Bering ✨
           </h2>
 
           <p className="text-lg text-[#8b8178] max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -436,7 +470,7 @@ export default function OattbeBeauticeShop() {
           <a
             href="https://t.me/oattbe"
             target="_blank"
-            className="bg-gradient-to-r from-[#bfc7d1] to-[#8f9aa8] hover:from-[#aeb7c2] hover:to-[#7f8997] text-white px-10 py-5 rounded-full inline-block hover:scale-105 transition"
+            className="bg-gradient-to-r from-[#1f1f1f] to-[#3a3a3a] hover:from-[#2b2b2b] hover:to-[#4a4a4a] text-white px-10 py-5 rounded-full inline-block hover:scale-105 transition"
           >
             Hozir buyurtma berish
           </a>
@@ -444,7 +478,7 @@ export default function OattbeBeauticeShop() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-gradient-to-r from-[#dfe5ec] to-[#bfc7d1] text-white mt-10">
+      <footer className="bg-gradient-to-r from-orange-100 to-orange-300 mt-10">
         <div className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-4 gap-14">
           <div>
             <img
@@ -453,7 +487,7 @@ export default function OattbeBeauticeShop() {
               className="h-16 mb-6 brightness-200"
             />
 
-            <p className="text-[#8b8178] leading-relaxed">
+            <p className="text-black/70 leading-relaxed">
               Korean premium skincare mahsulotlari.
             </p>
           </div>
@@ -461,7 +495,7 @@ export default function OattbeBeauticeShop() {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Kategoriyalar</h3>
 
-            <div className="space-y-4 text-white/70">
+            <div className="space-y-4 text-black/70">
               <div>Essence</div>
               <div>Serum</div>
               <div>Cream</div>
@@ -472,7 +506,7 @@ export default function OattbeBeauticeShop() {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Aloqa</h3>
 
-            <div className="space-y-4 text-[#8b8178]">
+            <div className="space-y-4 text-black/70">
               <p>+998 90 985 69 32</p>
               <p>@oattbe_uzbekistan</p>
               <p>@oattbe</p>
