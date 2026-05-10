@@ -428,8 +428,8 @@ product.name.toLowerCase().includes(search.toLowerCase())
 
           <div className="grid lg:grid-cols-3 gap-8">
             {[
-              '1 haftada yuzim juda namlandi va glow paydo bo‘ldi.',
-              'Mahsulot juda premium ko‘rinadi va teriga tez singadi.',
+              '1 haftada yuzim juda namlandi va siyanie paydo bo‘ldi.',
+              'Mahsulot juda yaxshi teriga tez singadi.',
               'Tasirchan teri uchun juda yaxshi ekan.',
             ].map((review, index) => (
               <div key={index} className="bg-[#f6efe7] rounded-[36px] p-10">
@@ -528,7 +528,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
           </div>
         </div>
 
-        <div className="border-t border-[#eadfd3] text-center py-6 text-white/50 text-sm">
+        <div className="border-t border-[#eadfd3] text-center py-6 text-black/70 text-sm">
           © 2026 OATTBE Uzbekistan. Barcha huquqlar himoyalangan.
         </div>
       </footer>
