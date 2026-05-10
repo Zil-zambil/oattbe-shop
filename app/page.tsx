@@ -88,14 +88,6 @@ export default function OattbeBeauticeShop() {
       badge: 'BEST',
     },
     {
-      name: 'OATTBE Retinol Peptide Lifting Pad (120 Pads)',
-      price: '280 000 so‘m',
-      oldPrice: '340 000 so‘m',
-      image:
-        'https://down-my.img.susercontent.com/file/my-11134207-7r990-lxugb8ki0vao27',
-      badge: 'BEST',
-    },
-    {
       name: 'Oattbe Contour V-fit Face Pack',
       price: '349 000 so‘m',
       oldPrice: '390 000 so‘m',
