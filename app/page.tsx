@@ -197,14 +197,14 @@ product.name.toLowerCase().includes(search.toLowerCase())
           <div className="flex items-center gap-4">
           <input
             type="search"
-            placeholder="Search products..."
+            placeholder="Mahsulotni qidirish..."
             autoComplete="off"
             value={search}
             onChange={(e) => {
             setSearch(e.target.value)
             }}
             className="
-            w-[240px]
+            w-[210px]
             px-5
             py-3
             rounded-full
@@ -231,15 +231,15 @@ product.name.toLowerCase().includes(search.toLowerCase())
       {/* HERO */}
       <section
         id="home"
-        className="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-14 items-center"
+        className="relative max-w-7xl mx-auto px-6 py-14 grid lg:grid-cols-2 gap-14 items-center"
       >
         <div>
-          <span className="bg-gradient-to-br from-[#fffaf7] to-[#f1e6db] text-[#8b8178] px-5 py-2 rounded-full text-sm inline-block mb-8">
+          <span className="bg-[#f6efe7] text-[#8b8178] px-5 py-2 rounded-full text-sm inline-block mb-8">
             Oattbega hush kelipsiz!
           </span>
 
-          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-            Oattbe Sog'lom
+          <h1 className="text-4xl lg:text-7xl font-bold leading-tight mb-8">
+            Oattbe — Sog'lom
             <br />
             Porlash bilan
             <br />
@@ -255,14 +255,14 @@ product.name.toLowerCase().includes(search.toLowerCase())
             <a
               href="https://t.me/oattbe"
               target="_blank"
-              className="bg-[#c7a58a] hover:bg-[#b79276] hover:from-[#aeb7c2] hover:to-[#7f8997] text-white px-8 py-4 rounded-full hover:scale-105 transition shadow-xl"
+              className="bg-[#c7a58a] hover:bg-[#b79276] hover:from-[#aeb7c2] hover:to-[#7f8997] text-white px-6 py-4 rounded-full hover:scale-105 transition shadow-xl"
             >
               Sotib olish
             </a>
 
             <a
               href="#products"
-              className="border border-[#d9dee5] px-8 py-4 rounded-full hover:bg-[#fff0f4] transition"
+              className="border border-[#d9dee5] px-6 py-4 rounded-full hover:bg-[#fff0f4] transition"
             >
               Mahsulotlarni ko‘rish
             </a>
@@ -281,7 +281,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
       </section>
 
       {/* CATEGORIES */}
-      <section id="categories" className="max-w-7xl mx-auto px-6 py-10">
+      <section id="categories" className="max-w-7xl mx-auto px-6 py-1">
         <div className="bg-gradient-to-br from-[#fffaf7] to-[#f1e6db] rounded-[40px] p-10 shadow-sm">
           <div className="flex items-center justify-between mb-10 flex-wrap gap-5">
             <div>
@@ -305,7 +305,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
 
                 <h3 className="text-2xl font-semibold mb-3">{category}</h3>
 
-                <p className="text-[#8b8178] leading-relaxed text-sm">
+                <p className="text-black/70 leading-relaxed text-sm">
                   Premium Korea Parvarishlar to'plami.
                 </p>
               </div>
@@ -424,7 +424,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="reviews" className="max-w-7xl mx-auto px-6 py-10">
+      <section id="reviews" className="max-w-7xl mx-auto px-6 py-1">
         <div className="bg-white rounded-[50px] p-12 shadow-sm">
           <div className="text-center mb-14">
             <p className="text-[#8b8178] uppercase tracking-[0.3em] text-sm mb-4">
@@ -440,7 +440,7 @@ product.name.toLowerCase().includes(search.toLowerCase())
               'Mahsulot juda premium ko‘rinadi va teriga tez singadi.',
               'Tasirchan teri uchun juda yaxshi ekan.',
             ].map((review, index) => (
-              <div key={index} className="bg-[#fff6f8] rounded-[36px] p-10">
+              <div key={index} className="bg-[#f6efe7] rounded-[36px] p-10">
                 <div className="text-5xl text-pink-200 mb-5">“</div>
 
                 <p className="text-[#8b8178] text-lg leading-relaxed mb-8">
